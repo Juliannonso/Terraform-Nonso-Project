@@ -1,4 +1,4 @@
-# install Jenkins
+# install Jenkins on Amazon Linux 2023
 
 # #!/bin/bash (if you are using shell script)
 
