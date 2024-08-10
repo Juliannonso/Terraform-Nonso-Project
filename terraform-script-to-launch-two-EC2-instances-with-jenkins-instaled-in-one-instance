@@ -14,9 +14,9 @@ provider "aws" {
 }
 
 resource "aws_instance" "jenkins_ec2" {
-  ami           = "ami-0766f68f0b06ab145" 
+  ami           = "ami-0ae8f15ae66fe8cda" 
   instance_type = "t2.micro"
-  #count = 5
+  #count = 1
   key_name                    = "Terraform-jenkins-KeyPair"
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.jenkins_security_group.id]
@@ -27,8 +27,8 @@ resource "aws_instance" "jenkins_ec2" {
   }
 }
 
-resource "aws_instance" "jenkins_ec22" {
-  ami           = "ami-08c40ec9ead489470"  
+resource "aws_instance" "jenkins_slave-Node" {
+  ami           = "ami-04a81a99f5ec58529"  
   instance_type = "t2.micro"
   key_name                    = "Terraform-jenkins-KeyPair"
   associate_public_ip_address = true
