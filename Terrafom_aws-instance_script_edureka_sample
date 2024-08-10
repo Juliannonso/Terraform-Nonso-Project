@@ -1,7 +1,3 @@
-Region: Singapore
-AZ: ap-southeast-1a
-
-edureka@kmaster:~/terraform/project$ cat final-project.tf
 terraform {
  required_providers {
  aws = {
@@ -165,6 +161,7 @@ resource "aws_instance" "proj-instance" {
  tags = {
  Name = "jenkins-master-instance"
  }
+}
 # Creating an ubuntu EC2 instance
 resource "aws_instance" "proj-instance" {
  ami = "ami-04a81a99f5ec58529"
@@ -178,4 +175,6 @@ resource "aws_instance" "proj-instance" {
  tags = {
  Name = "jenkins-slave-node-instance"
  }
+}
+
 }
